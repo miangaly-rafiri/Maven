@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+     background: linear-gradient(135deg, #ff69b4, #ffffff);
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 2em;
+	color: white; 
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+
+.tableau-discussions {
+    width: 90%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;
+    overflow: hidden;
+    color: black;
+}
+
+
+.tableau-discussions th {
+    background-color: #ffffff;
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+
+.tableau-discussions td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: black;
+}
+
+.tableau-discussions td.message {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.tableau-discussions td.response {
+    font-size: 14px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+
+.tableau-discussions td.timestamp {
+    font-size: 12px;
+    color: #666;
+}
+
+
+.tableau-discussions tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+
+.tableau-discussions th, .tableau-discussions td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd; 
+}
+
+.tableau-discussions tr td:last-child, 
+.tableau-discussions tr th:last-child {
+    border-right: none;
+}
+
+@media screen and (max-width: 768px) {
+    .tableau-discussions {
+        width: 100%;
+    }
+    
+    .tableau-discussions th, .tableau-discussions td {
+        font-size: 12px;
+        padding: 8px;
+    }
+} 

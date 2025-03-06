@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>Historiques de discussions</title>
+	    <link rel="stylesheet" type="text/css" href="discu.css">
+	</head>
+<body>
+	
+    <h1>Liste des Discussions</h1>
+    <table class="tableau-discussions">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Message</th>
+                <th>Response</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="discussion : ${discussions}">
+                <td th:text="${discussion.username}"></td>
+                <td th:text="${discussion.userMessage}"></td>
+                <td th:text="${discussion.response}"></td>
+                <td th:text="${discussion.timestamp}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

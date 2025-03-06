@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Motivation</title>
+    <link rel="stylesheet" type="text/css" href="/chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Boostez Votre Motivation</h1>
+
+        <div class="chat-box">
+            <div class="response-box">
+                <h2>Gardez le sourire 😊😊 </h2>
+				<div th:if="${response}" class="response">
+				            <p th:text="${response}"></p>
+				        </div>
+            </div>
+        </div>
+
+        <form action="/sendMessage" method="post">
+            <label for="username">Nom :</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Envoyer</button>
+			
+        </form>
+    </div>
+</body>
+</html>
